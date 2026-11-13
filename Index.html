@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Ahona ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;text-align:center;background:linear-gradient(#ff9a9e,#fecfef,#ffdde1);font-family:Arial,sans-serif;padding-bottom:30px}
+.page{display:none;padding:15px}
+.page.active{display:block}
+.card{background:white;padding:20px;margin:15px auto;max-width:450px;border-radius:25px;box-shadow:0 5px 20px rgba(255,0,102,.3)}
+h1{color:#ff0066;font-size:32px;margin:10px 0}
+h2{color:#d4005e}
+p{font-size:19px;line-height:1.5;color:#333}
+button{background:#ff0066;color:white;padding:14px 28px;font-size:18px;border:none;border-radius:15px;margin:8px;cursor:pointer}
+button.back{background:#fff;color:#ff0066;border:2px solid #ff0066}
+.balloon{font-size:45px;display:inline-block;animation:urbe 1.5s infinite alternate}
+@keyframes urbe{from{transform:translateY(0)}to{transform:translateY(-15px)}}
+.cake{font-size:100px;animation:cake 1s infinite alternate}
+@keyframes cake{from{transform:scale(1)}to{transform:scale(1.1)}}
+img.main-img{width:100%;max-width:350px;height:auto;border-radius:18px;border:5px solid #ff66a3;box-shadow:0 0 0 5px #fff,0 10px 25px #ff6699;object-fit:cover}
+.roses{font-size:32px;margin:10px}
+.heart{font-size:60px;animation:cake 1s infinite alternate}
+.wish-box{background:#fff2cc;padding:15px;border-radius:15px;margin:12px 0;font-size:19px}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 - START -->
+<div id="p1" class="page active">
+  <div class="card">
+    <span class="balloon">🎈</span><span class="balloon">🎈</span><span class="balloon">🎈</span>
+    <h1>🎂 Happy Birthday! 🎂</h1>
+    <div class="cake">🎂</div>
+    <h2>Ajker Din Ta Sudhu Tomar</h2>
+    <p>Allah tomake onek valo rakhuk,<br>Tomar sob sopno puron hok,<br>Tumi onek boro hou ❤️</p>
+    <button onclick="go(2)">Surprise Dekho ➡️</button>
+  </div>
+</div>
+
+<!-- PAGE 2 - PHOTO -->
+<div id="p2" class="page">
+  <div class="card">
+    <h1>Onek Onek Valobasa Roilo Tomar Jonno</h1>
+    <p>Aaj Tomar Jonmodin 🎂</p>
+    <img class="main-img" src="https://i.imgur.com/8Km9tLL.jpg" alt="Ahona">
+    <div class="roses">🌹🌹🌹🌹🌹</div>
+    <p><b>Happy Birthday Ahona<br>Many Many Happy Returns Of The Day ❤️</b></p>
+    <button class="back" onclick="go(1)">⬅ Back</button>
+    <button onclick="go(3)">Next ➡️</button>
+  </div>
+</div>
+
+<!-- PAGE 3 - CAKE + WISH -->
+<div id="p3" class="page">
+  <div class="card">
+    <h1>🎂 Cake Katao 🎂</h1>
+    <div class="cake">🎂</div>
+    <p>Cholo aksathe cake kati!</p>
+    <button onclick="cakeKata()">🎂 Cake Katao</button>
+    <div id="cakeMsg" style="display:none" class="wish-box">
+      🎉 Cake Kata Hoye Geche! 🎉<br>Happy Birthday Ahona ❤️
+    </div>
+    <div class="wish-box">✨ Tumi hasle sob sundor lage ✨</div>
+    <div class="wish-box">✨ Tumi amar kache onek special ✨</div>
+    <div class="wish-box">✨ Sob somoy hasi khusi thako ✨</div>
+    <br>
+    <button class="back" onclick="go(2)">⬅ Back</button>
+    <button onclick="go(4)">Last Surprise ➡️</button>
+  </div>
+</div>
+
+<!-- PAGE 4 - FINAL -->
+<div id="p4" class="page">
+  <div class="card">
+    <div class="heart">❤️</div>
+    <h1>Surprise For You!</h1>
+    <p style="font-size:22px"><b>Ahona,</b><br><br>
+    Tumi onek valo ekta meye.<br>
+    Tomar jonno mon theke doa roilo.<br>
+    Jibone onek boro hou,<br>
+    Sob somoy valo thako.<br><br>
+    <span style="color:#ff0066;font-size:26px">Happy Birthday Once Again! 🎂❤️</span>
+    </p>
+    <div class="roses">🎈🎂🎁🌹❤️🎈🎂🎁🌹❤️</div>
+    <br>
+    <button class="back" onclick="go(3)">⬅ Back</button>
+    <button onclick="go(1)">Abar Prothom Theke 🔄</button>
+  </div>
+</div>
+
+<script>
+function go(n){
+  document.getElementById("p1").classList.remove("active");
+  document.getElementById("p2").classList.remove("active");
+  document.getElementById("p3").classList.remove("active");
+  document.getElementById("p4").classList.remove("active");
+  document.getElementById("p"+n).classList.add("active");
+  window.scrollTo(0,0);
+}
+function cakeKata(){
+  document.getElementById("cakeMsg").style.display="block";
+  alert("🎂 Cake Kata Hoye Geche! Happy Birthday Ahona ❤️");
+}
+</script>
+
+</body>
+  </html>
